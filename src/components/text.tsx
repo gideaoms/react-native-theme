@@ -1,5 +1,5 @@
 import Native from 'react-native';
-import { Color, Screen, color, screen } from '../theme.ts';
+import { Color, Window, color, window } from '../theme.ts';
 
 const theme = {
   color: {
@@ -18,7 +18,7 @@ namespace Text {
   export type Props = {
     children: string
     color?: Color;
-    fontSize?: Screen;
+    fontSize?: Window;
   }
 }
 
@@ -27,7 +27,7 @@ export function Text(props: Text.Props) {
     <Native.Text
       style={{
         color: color(props.color),
-        fontSize: screen(props.fontSize),
+        fontSize: window(props.fontSize),
       }}
     >{props.children}</Native.Text>
   );
